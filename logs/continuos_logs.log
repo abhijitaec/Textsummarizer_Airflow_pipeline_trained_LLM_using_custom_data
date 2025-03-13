@@ -1,0 +1,170 @@
+[2025-03-10 10:08:46,356: INFO: main: Logging is implemented]
+[2025-03-11 23:09:41,082: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-11 23:09:41,182: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-11 23:12:49,470: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-11 23:12:49,481: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-11 23:12:49,481: INFO: common: created directory at: artifacts]
+[2025-03-11 23:12:49,489: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-11 23:12:51,724: INFO: 1454106726: File is downloaded]
+[2025-03-11 23:27:47,524: INFO: config: PyTorch version 2.6.0 available.]
+[2025-03-11 23:33:51,841: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-11 23:33:51,846: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-11 23:33:51,851: INFO: common: created directory at: artifacts]
+[2025-03-11 23:33:51,857: INFO: common: created directory at: artifacts/data_transformation]
+[2025-03-12 20:37:35,470: INFO: main: stage Data Ingestion stage initiated]
+[2025-03-12 20:37:35,502: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-12 20:37:35,514: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-12 20:37:35,516: INFO: common: created directory at: artifacts]
+[2025-03-12 20:37:35,518: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-12 20:37:37,672: INFO: data_ingestion: File is downloaded]
+[2025-03-12 20:37:37,964: INFO: main: Stage Data Ingestion stage Completed]
+[2025-03-12 20:58:29,160: INFO: utils: NumExpr defaulting to 4 threads.]
+[2025-03-12 20:58:41,924: INFO: main: stage Data Ingestion stage initiated]
+[2025-03-12 20:58:41,939: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-12 20:58:41,944: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-12 20:58:41,946: INFO: common: created directory at: artifacts]
+[2025-03-12 20:58:41,949: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-12 20:58:41,954: INFO: data_ingestion: File already exits]
+[2025-03-12 20:58:42,177: INFO: main: Stage Data Ingestion stage Completed]
+[2025-03-12 20:58:42,177: INFO: main: stage Data Transformation stage initiated]
+[2025-03-12 20:58:42,193: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-12 20:58:42,199: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-12 20:58:42,201: INFO: common: created directory at: artifacts]
+[2025-03-12 20:58:42,202: INFO: common: created directory at: artifacts/data_transformation]
+[2025-03-12 20:58:43,616: ERROR: main: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']]
+Traceback (most recent call last):
+  File "F:\anaconda3\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1585, in extract_vocab_merges_from_model
+    from tiktoken.load import load_tiktoken_bpe
+ModuleNotFoundError: No module named 'tiktoken'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\anaconda3\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1725, in convert_slow_tokenizer
+    ).converted()
+      ^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1622, in converted
+    tokenizer = self.tokenizer()
+                ^^^^^^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1615, in tokenizer
+    vocab_scores, merges = self.extract_vocab_merges_from_model(self.vocab_file)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1587, in extract_vocab_merges_from_model
+    raise ValueError(
+ValueError: `tiktoken` is required to read a `tiktoken` file. Install it with `pip install tiktoken`.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\udimy\MLOps\Textsummerizer\main.py", line 23, in <module>
+    data_ingestion_pipeline.initiate_data_transformation()
+  File "E:\udimy\MLOps\Textsummerizer\src\textSummarizer\pipeline\stage_2_data_transformation_pipeline.py", line 13, in initiate_data_transformation
+    data_transformation=DataTransformation(config=data_transformation_config)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\udimy\MLOps\Textsummerizer\src\textSummarizer\components\data_transformation.py", line 11, in __init__
+    self.tokenizer=AutoTokenizer.from_pretrained(config.tokenizer_name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\transformers\models\auto\tokenization_auto.py", line 963, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\transformers\tokenization_utils_base.py", line 2052, in from_pretrained
+    return cls._from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\transformers\tokenization_utils_base.py", line 2292, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 136, in __init__
+    super().__init__(
+  File "F:\anaconda3\Lib\site-packages\transformers\tokenization_utils_fast.py", line 139, in __init__
+    fast_tokenizer = convert_slow_tokenizer(self, from_tiktoken=True)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1727, in convert_slow_tokenizer
+    raise ValueError(
+ValueError: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']
+[2025-03-12 20:59:46,938: INFO: utils: NumExpr defaulting to 4 threads.]
+[2025-03-12 20:59:48,083: INFO: main: stage Data Ingestion stage initiated]
+[2025-03-12 20:59:48,083: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-12 20:59:48,091: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-12 20:59:48,092: INFO: common: created directory at: artifacts]
+[2025-03-12 20:59:48,095: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-03-12 20:59:48,095: INFO: data_ingestion: File already exits]
+[2025-03-12 20:59:48,313: INFO: main: Stage Data Ingestion stage Completed]
+[2025-03-12 20:59:48,313: INFO: main: stage Data Transformation stage initiated]
+[2025-03-12 20:59:48,328: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-12 20:59:48,334: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-12 20:59:48,337: INFO: common: created directory at: artifacts]
+[2025-03-12 20:59:48,338: INFO: common: created directory at: artifacts/data_transformation]
+[2025-03-12 20:59:49,728: ERROR: main: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']]
+Traceback (most recent call last):
+  File "F:\anaconda3\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1725, in convert_slow_tokenizer
+    ).converted()
+      ^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1622, in converted
+    tokenizer = self.tokenizer()
+                ^^^^^^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1615, in tokenizer
+    vocab_scores, merges = self.extract_vocab_merges_from_model(self.vocab_file)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1591, in extract_vocab_merges_from_model
+    bpe_ranks = load_tiktoken_bpe(tiktoken_url)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\tiktoken\load.py", line 148, in load_tiktoken_bpe
+    contents = read_file_cached(tiktoken_bpe_file, expected_hash)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\tiktoken\load.py", line 48, in read_file_cached
+    cache_key = hashlib.sha1(blobpath.encode()).hexdigest()
+                             ^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\udimy\MLOps\Textsummerizer\main.py", line 23, in <module>
+    data_ingestion_pipeline.initiate_data_transformation()
+  File "E:\udimy\MLOps\Textsummerizer\src\textSummarizer\pipeline\stage_2_data_transformation_pipeline.py", line 13, in initiate_data_transformation
+    data_transformation=DataTransformation(config=data_transformation_config)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\udimy\MLOps\Textsummerizer\src\textSummarizer\components\data_transformation.py", line 11, in __init__
+    self.tokenizer=AutoTokenizer.from_pretrained(config.tokenizer_name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\transformers\models\auto\tokenization_auto.py", line 963, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\transformers\tokenization_utils_base.py", line 2052, in from_pretrained
+    return cls._from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\transformers\tokenization_utils_base.py", line 2292, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 136, in __init__
+    super().__init__(
+  File "F:\anaconda3\Lib\site-packages\transformers\tokenization_utils_fast.py", line 139, in __init__
+    fast_tokenizer = convert_slow_tokenizer(self, from_tiktoken=True)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\anaconda3\Lib\site-packages\transformers\convert_slow_tokenizer.py", line 1727, in convert_slow_tokenizer
+    raise ValueError(
+ValueError: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']
+[2025-03-12 21:06:43,888: INFO: config: PyTorch version 2.6.0 available.]
+[2025-03-12 21:06:59,056: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-12 21:06:59,116: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-12 21:06:59,163: INFO: common: created directory at: artifacts]
+[2025-03-12 21:06:59,170: INFO: common: created directory at: artifacts/data_transformation]
+[2025-03-12 21:36:43,324: INFO: config: PyTorch version 2.6.0 available.]
+[2025-03-12 21:42:05,431: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-12 21:42:05,446: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-12 21:42:05,451: INFO: common: created directory at: artifacts]
+[2025-03-12 21:42:05,455: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-12 21:46:54,400: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-12 21:46:54,406: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-12 21:46:54,422: INFO: common: created directory at: artifacts]
+[2025-03-12 21:46:54,429: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-12 21:56:17,701: INFO: config: PyTorch version 2.6.0 available.]
+[2025-03-12 21:56:20,412: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-12 21:56:20,458: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-12 21:56:20,458: INFO: common: created directory at: artifacts]
+[2025-03-12 21:56:20,474: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-12 22:02:35,164: INFO: config: PyTorch version 2.6.0 available.]
+[2025-03-12 22:02:39,277: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-12 22:02:39,320: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-12 22:02:39,395: INFO: common: created directory at: artifacts]
+[2025-03-12 22:02:39,395: INFO: common: created directory at: artifacts/model_trainer]
