@@ -168,3 +168,8 @@ ValueError: Converting from Tiktoken failed, if a converter for SentencePiece is
 [2025-03-12 22:02:39,320: INFO: common: yaml file: params.yaml loaded successfully]
 [2025-03-12 22:02:39,395: INFO: common: created directory at: artifacts]
 [2025-03-12 22:02:39,395: INFO: common: created directory at: artifacts/model_trainer]
+[2025-03-13 11:34:40,918: INFO: config: PyTorch version 2.6.0 available.]
+[2025-03-13 11:35:20,110: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-03-13 11:35:20,197: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-03-13 11:35:20,243: INFO: common: created directory at: artifacts]
+[2025-03-13 11:35:20,243: INFO: common: created directory at: artifacts/model_evaluation]
